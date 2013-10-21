@@ -16,6 +16,6 @@
 @property (strong, nonatomic) UIWindow *window;
 
 @property (strong, nonatomic) ViewController *viewController;
-@property (strong, nonatomic) NewRootViewController *newRootViewController;
+@property (strong, nonatomic) NewRootViewController *updatedRootViewController;
 
 @end
