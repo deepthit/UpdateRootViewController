@@ -25,8 +25,23 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+  [super viewDidLoad];
+  
+  // Create a label
+  CGFloat labelWidth = 200.f;
+  CGFloat labelHeight = 200.f;
+  CGFloat xOrigin = (CGRectGetWidth(self.view.bounds) / 2) - (labelWidth / 2);
+  CGFloat yOrigin = (CGRectGetHeight(self.view.bounds) / 2) - (labelHeight / 2);
+  UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(xOrigin, yOrigin, labelWidth, labelHeight)];
+  label.autoresizingMask = (UIViewAutoresizingFlexibleLeftMargin
+                            | UIViewAutoresizingFlexibleRightMargin
+                            | UIViewAutoresizingFlexibleTopMargin
+                            | UIViewAutoresizingFlexibleBottomMargin);
+  label.text = @"Subsequent Launch";
+  label.font = [UIFont boldSystemFontOfSize:18.f];
+  label.backgroundColor = [UIColor clearColor];
+  label.textAlignment = NSTextAlignmentCenter;
+  [self.view addSubview:label];
 }
 
 - (void)didReceiveMemoryWarning
